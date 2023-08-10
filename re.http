@@ -1,0 +1,41 @@
+
+GET http://localhost:4000/
+
+### 
+
+POST http://localhost:4000/expense
+Content-Type: application/json
+
+{
+    "name": "Weekend-tour",
+    "date_of_expense":"2023-07-27T19:02:28.925Z" ,
+    "category" : "food" ,
+    "amount" : 4000,
+    "created_by" : "me"
+}
+ 
+######
+GET http://localhost:4000/expenses?limit=&page=2
+
+### 
+
+
+GET http://localhost:4000/expense/shopping
+
+### 
+
+
+PUT http://localhost:4000/expense/64c2bf44f0d225be0c42db71/
+Content-Type: application/json
+
+{
+    "name": "Weekend",
+    "date_of_expense":"2023-07-27T19:02:28.925Z" ,
+    "category" : "food" ,
+    "amount" : 4000,
+    "created_by" : "me"
+}
+
+###
+
+DELETE http://localhost:4000/expense/64ae57114910a1fa52ed22be/
